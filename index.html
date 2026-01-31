@@ -1,0 +1,1033 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ✅ Portfolio: Automation Test Engineer (Dark + Accent) -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><!-- TODO: Your Name -->Your Name | Automation Test Engineer</title>
+    <meta name="description" content="Automation Test Engineer portfolio: frameworks, projects, and test philosophy." />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind theme config (accent color) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        /* ✅ Change accent easily:
+                           Cyber Blue:  #22d3ee
+                           Emerald:    #34d399
+                        */
+                        accent: "#22d3ee",
+                    },
+                    boxShadow: {
+                        glow: "0 0 0 1px rgba(34,211,238,.25), 0 0 30px rgba(34,211,238,.12)"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+
+</head>
+
+<body class="bg-slate-950 text-slate-100 antialiased">
+    <!-- Glow BG -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+        <div
+            class="absolute left-1/2 top-0 h-[500px] w-[900px] -translate-x-1/2 rounded-full blur-3xl opacity-20 bg-accent">
+        </div>
+        <div class="absolute right-0 bottom-0 h-[350px] w-[350px] rounded-full blur-3xl opacity-10 bg-accent"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur overflow-visible">
+        <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 overflow-visible">
+            <a href="#top" class="group flex items-center gap-3">
+                <!-- Navbar Profile Photo (SMALL) -->
+                <div class="nav-avatar-wrap relative">
+                    <img src="assets/profile.jpg" alt="MD. Ibrahim Shake Shuvo" class="nav-avatar" />
+                </div>
+
+                <!-- Name + rotating message -->
+                <div class="leading-tight">
+                    <div class="flex items-center gap-2">
+                        <span class="font-semibold tracking-tight">
+                            MD.Ibrahim Shake Shuvo
+                        </span>
+
+                        <!-- tiny cyber dot (optional) -->
+                        <span class="h-1.5 w-1.5 rounded-full bg-accent shadow-glow"></span>
+                    </div>
+
+                    <!-- Rotating text (JS updates this) -->
+                    <div class="text-xs text-slate-300">
+                        <span class="type-line">
+                            <span id="rotatingRole">Automation Web Tester</span>
+                            <span class="type-cursor" aria-hidden="true">|</span>
+                        </span>
+                    </div>
+                </div>
+            </a>
+
+
+            <div class="hidden items-center gap-6 md:flex">
+                <a class="nav-link" href="#stack">Tech</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#philosophy">Philosophy</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </div>
+
+            <a href="#projects" class="btn-primary hidden md:inline-flex">
+                View My Frameworks
+            </a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <!-- HERO -->
+        <section class="mx-auto max-w-6xl px-4 pt-16 pb-12 md:pt-24 premium-hero">
+
+            <div class="grid gap-10 md:grid-cols-2 md:items-center">
+                <!-- Left -->
+                <div>
+                    <p class="badge">
+                        <!-- TODO: Replace -->
+                        Automation Test Engineer • SDET
+                    </p>
+
+                    <h1 class="mt-4 text-4xl font-extrabold tracking-tight md:text-5xl hero-title">
+                        Building Resilient Systems through
+                        <span class="text-accent">Automated Excellence</span>
+                    </h1>
+
+
+                    <p class="mt-5 text-lg text-slate-300 leading-relaxed hero-sub">
+                        I have <span class="font-semibold text-slate-100">1+ years</span> of experience designing
+                        scalable test automation frameworks for web, mobile, and API platforms—focused on
+                        stability, fast feedback, and CI/CD reliability.
+                    </p>
+
+                    <div class="mt-8 flex flex-col gap-3 sm:flex-row hero-actions">
+                        <a class="btn-primary" href="#projects">View My Frameworks</a>
+                        <a class="btn-secondary" href="#contact">Let’s Talk</a>
+                    </div>
+
+
+                    <div class="mt-8 grid grid-cols-2 gap-3 text-sm text-slate-300 sm:grid-cols-3">
+                        <!-- TODO: Swap proof points -->
+                        <div class="stat">
+                            <div class="stat-number">95%+</div>
+                            <div class="stat-label">Flake reduction</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">CI/CD</div>
+                            <div class="stat-label">Quality gates</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">API</div>
+                            <div class="stat-label">Contract testing</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right (✅ Photo + What I deliver) -->
+                <div class="card p-6 md:p-8 premium-card tilt-card">
+
+                    <!-- ✅ Your Photo -->
+                    <!-- IMPORTANT:
+               1) Create folder: assets/
+               2) Put your photo: assets/profile.jpg (or change the filename below)
+          -->
+                    <div class="flex justify-center mb-6">
+                        <div class="avatar-wrap relative w-40 h-40 md:w-52 md:h-52">
+                            <div class="avatar-rotator"></div>
+                            <div class="avatar-pulse"></div>
+                            <div class="avatar-orbit"></div>
+                            <div class="avatar-spark"></div>
+
+
+                            <img src="assets/profile.jpg" alt="MD. Ibrahim Shake Shuvo - Automation Test Engineer"
+                                class="avatar-img w-full h-full object-cover rounded-full border-4 border-accent shadow-lg" />
+
+                            <div class="avatar-scan"></div>
+                        </div>
+
+                    </div>
+
+
+
+                    <h2 class="text-xl font-semibold deliver-title">What I deliver</h2>
+
+                    <ul class="mt-4 space-y-3 text-slate-300 deliver-list">
+                        <li class="flex gap-3 deliver-item">
+                            <span class="mt-2 h-2 w-2 rounded-full bg-accent"></span>
+                            <span><span class="text-slate-100 font-medium">Framework-first</span> automation with clean
+                                architecture (POM, fixtures, utilities).</span>
+                        </li>
+
+                        <li class="flex gap-3 deliver-item">
+                            <span class="mt-2 h-2 w-2 rounded-full bg-accent"></span>
+                            <span><span class="text-slate-100 font-medium">Actionable reporting</span> (screenshots,
+                                logs, trace/video) for fast debugging.</span>
+                        </li>
+
+                        <li class="flex gap-3 deliver-item">
+                            <span class="mt-2 h-2 w-2 rounded-full bg-accent"></span>
+                            <span><span class="text-slate-100 font-medium">Pipeline-ready</span> suites with parallel
+                                runs, tags, and environment configs.</span>
+                        </li>
+                    </ul>
+
+
+                    <div class="mt-6 grid grid-cols-2 gap-3">
+                        <!-- TODO: Update -->
+                        <div class="mini">
+                            <p class="mini-label">Location</p>
+                            <p class="mini-value">Bangladesh (Remote)</p>
+                        </div>
+                        <div class="mini">
+                            <p class="mini-label">Availability</p>
+                            <p class="mini-value">Open to roles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH STACK -->
+        <section id="stack" class="mx-auto max-w-6xl px-4 py-12">
+            <div>
+                <h2 class="section-title">Tech Stack</h2>
+                <p class="section-subtitle">Tools I use to ship reliable automation at scale.</p>
+            </div>
+
+            <div class="mt-8 grid gap-6 md:grid-cols-2">
+                <div class="card p-6">
+                    <h3 class="card-title">Languages</h3>
+                    <div class="mt-4 flex flex-wrap gap-2">
+
+                        <span class="chip">Python</span>
+
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="card-title">Frameworks</h3>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="chip">Selenium</span>
+
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="card-title">CI/CD & Tools</h3>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="chip">Jenkins</span>
+                        <span class="chip">Docker</span>
+                        <span class="chip">Git</span>
+                        <span class="chip">AWS</span>
+                        <span class="chip">GitHub Actions</span>
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="card-title">API / Performance</h3>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="chip">RestAssured</span>
+                        <span class="chip">Postman</span>
+                        <span class="chip">JMeter</span>
+                        <span class="chip">Contract Testing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="mx-auto max-w-6xl px-4 py-12">
+            <div>
+                <h2 class="section-title">Project Showcase</h2>
+                <p class="section-subtitle">3 frameworks/projects that demonstrate architecture, stability, and CI
+                    readiness.</p>
+            </div>
+
+            <div class="mt-8 grid gap-6 md:grid-cols-3">
+                <article class="project-card card p-6">
+                    <div class="flex items-start justify-between gap-4">
+                        <h3 class="text-lg font-semibold">Web UI Automation Framework</h3>
+                        <span class="badge-soft">Selenium</span>
+                    </div>
+                    <div class="mt-4 space-y-3">
+                        <p class="text-sm text-slate-300">
+                            <span class="font-semibold text-slate-100">Problem:</span>
+                            UI tests were flaky and slow, blocking releases and causing noisy CI failures.
+                        </p>
+                        <p class="text-sm text-slate-300">
+                            <span class="font-semibold text-slate-100">Solution:</span>
+                            Built a Page Object Model + reusable utilities, smart waits, and parallel execution with
+                            clean reporting.
+                        </p>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between">
+                        <a class="link" href="https://github.com/Ibrahim009-Devloper" target="_blank"
+                            rel="noopener">GitHub →</a>
+                        <span class="text-xs text-slate-400">POM • Parallel • Reports</span>
+                    </div>
+                </article>
+
+                <article class="project-card card p-6">
+                    <div class="flex items-start justify-between gap-4">
+                        <h3 class="text-lg font-semibold">API Regression Suite</h3>
+                        <span class="badge-soft">RestAssured</span>
+                    </div>
+                    <div class="mt-4 space-y-3">
+                        <p class="text-sm text-slate-300">
+                            <span class="font-semibold text-slate-100">Problem:</span>
+                            Frequent backend changes caused production issues due to missing automated contract checks.
+                        </p>
+                        <p class="text-sm text-slate-300">
+                            <span class="font-semibold text-slate-100">Solution:</span>
+                            Implemented data-driven tests, schema validation, and CI gates to catch breaking changes
+                            early.
+                        </p>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between">
+                        <a class="link" href="https://github.com/Ibrahim009-Devloper" target="_blank"
+                            rel="noopener">GitHub →</a>
+                        <span class="text-xs text-slate-400">Data-Driven • CI Gates</span>
+                    </div>
+                </article>
+
+                <article class="project-card card p-6">
+                    <div class="flex items-start justify-between gap-4">
+                        <h3 class="text-lg font-semibold">Mobile Automation Pack</h3>
+                        <span class="badge-soft">Appium</span>
+                    </div>
+                    <div class="mt-4 space-y-3">
+                        <p class="text-sm text-slate-300">
+                            <span class="font-semibold text-slate-100">Problem:</span>
+                            Manual mobile regression took days and delayed releases across devices and OS versions.
+                        </p>
+                        <p class="text-sm text-slate-300">
+                            <span class="font-semibold text-slate-100">Solution:</span>
+                            Designed a layered framework with device configs, page abstractions, and stable selectors
+                            strategy.
+                        </p>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between">
+                        <a class="link" href="https://github.com/Ibrahim009-Devloper" target="_blank"
+                            rel="noopener">GitHub →</a>
+                        <span class="text-xs text-slate-400">Configs • Page Layers</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PHILOSOPHY -->
+        <section id="philosophy" class="mx-auto max-w-6xl px-4 py-12">
+            <div class="card p-6 md:p-8">
+                <h2 class="section-title">Test Automation Philosophy</h2>
+                <p class="section-subtitle mt-2">My approach balances speed, confidence, and maintainability.</p>
+
+                <div class="mt-8 grid gap-6 md:grid-cols-3">
+                    <div class="philo philo-premium">
+                        <h3 class="philo-title">Testing Pyramid</h3>
+                        <p class="philo-text">
+                            Prioritize fast unit/service checks, validate APIs at the contract level, and keep UI tests
+                            lean & high-value.
+                        </p>
+                    </div>
+
+                    <div class="philo philo-shiftleft">
+
+                        <h3 class="philo-title">Shift-Left</h3>
+                        <p class="philo-text">
+                            Catch defects earlier with PR checks, static analysis, test data strategies, and quick
+                            feedback loops.
+                        </p>
+                    </div>
+
+                    <div class="philo philo-cicd">
+
+                        <h3 class="philo-title">CI/CD Integration</h3>
+                        <p class="philo-text">
+                            Automation must be pipeline-native: tags, retries (careful!), parallelism, artifacts, and
+                            deterministic environments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="mx-auto max-w-6xl px-4 py-12">
+            <div class="grid gap-8 md:grid-cols-2 md:items-start">
+                <div>
+                    <h2 class="section-title">Contact</h2>
+                    <p class="section-subtitle">
+                        Want to discuss a role, a framework design, or how I reduce flaky tests? Send a message.
+                    </p>
+
+                    <div class="mt-6 flex flex-wrap gap-3 social-buttons">
+
+                        <a class="btn-secondary social-btn" href="#"
+                            onclick="event.preventDefault(); openLinkedInNotice();">
+                            <span class="icon linkedin"></span>
+                            LinkedIn
+                        </a>
+
+
+                        <a class="btn-secondary social-btn" href="https://github.com/Ibrahim009-Devloper"
+                            target="_blank" rel="noopener noreferrer">
+                            <span class="icon github"></span>
+                            GitHub
+                        </a>
+
+                        <a class="btn-secondary social-btn" href="https://www.facebook.com/share/1AYy1a6DM9/"
+                            target="_blank" rel="noopener noreferrer">
+                            <span class="icon facebook"></span>
+                            Facebook
+                        </a>
+
+                        <button class="btn-secondary social-btn" type="button"
+                            onclick="navigator.clipboard.writeText('ibrahimshake100@gmail.com'); showToast({title:'Copied',message:'Email copied to clipboard',type:'success'});">
+                            <span class="icon mail"></span>
+                            Copy Email
+                        </button>
+
+                    </div>
+
+
+                    <p class="mt-6 text-sm text-slate-400">
+                        ✅ This contact form is connected via Formspree .
+                    </p>
+                </div>
+
+                <div class="card p-6 contact-card-v2">
+
+                    <!-- ✅ REAL WORKING CONTACT FORM (Formspree) -->
+                    <!-- IMPORTANT:
+               1) Go to Formspree and create a form
+               2) Copy your form endpoint and paste into action=""
+               Example: https://formspree.io/f/abcdwxyz
+          -->
+                    <form id="contactForm" action="https://formspree.io/f/mwvbrnwo" method="POST" class="contact-form">
+                        <!-- Email subject -->
+                        <input type="hidden" name="_subject" value="New message from Portfolio Website" />
+
+                        <!-- Anti-spam -->
+                        <input type="text" name="_gotcha" style="display:none" />
+
+                        <div class="field">
+                            <label class="label float-label">Name</label>
+                            <input type="text" name="name" class="input premium-input" placeholder="Your name"
+                                required />
+                            <span class="field-glow"></span>
+                        </div>
+
+
+                        <div class="field">
+                            <label class="label float-label">Email</label>
+                            <input type="email" name="email" class="input premium-input" placeholder="you@company.com"
+                                required />
+                            <span class="field-glow"></span>
+                        </div>
+
+
+                        <div class="field">
+                            <label class="label float-label">Message</label>
+                            <textarea name="message" class="input premium-input min-h-[120px]"
+                                placeholder="Tell me about the role or project..." required></textarea>
+                            <span class="field-glow"></span>
+                        </div>
+
+
+                        <button id="sendBtn" type="submit" class="btn-primary w-full premium-send btn-ripple">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-shine" aria-hidden="true"></span>
+                        </button>
+
+                        <p class="text-xs text-slate-400 text-center">
+                            Your message will be sent directly to my email.
+                        </p>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-8">
+        <div class="mx-auto max-w-6xl px-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <p class="text-sm text-slate-400">
+                © <span id="year"></span> <!-- TODO: Your Name -->MD.Ibrahim Shake Shuvo • Automation Test Engineer
+            </p>
+
+            <div class="flex gap-4 text-sm">
+                <a class="link" href="#top">Back to top</a>
+                <a class="link" href="#projects">Projects</a>
+                <a class="link" href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const messages = [
+            "Hi! I’m an Automation Web Tester 👋",
+            "I reduce flaky tests and improve CI reliability.",
+            "I build Selenium frameworks using POM + utilities.",
+            "CI/CD ready suites with reports & artifacts.",
+            "Let’s talk about QA automation!"
+        ];
+
+        const bubble = document.getElementById("navSmsBubble");
+        const textEl = document.getElementById("navSmsText");
+        const timeEl = document.getElementById("navSmsTime");
+
+        function timeLabel() {
+            const d = new Date();
+            const hh = String(d.getHours()).padStart(2, "0");
+            const mm = String(d.getMinutes()).padStart(2, "0");
+            return `${hh}:${mm}`;
+        }
+
+        function typeText(el, text, speed = 20) {
+            el.textContent = "";
+            let i = 0;
+            return new Promise((resolve) => {
+                const t = setInterval(() => {
+                    el.textContent += text[i] || "";
+                    i++;
+                    if (i >= text.length) {
+                        clearInterval(t);
+                        resolve();
+                    }
+                }, speed);
+            });
+        }
+
+        function showBubble() {
+            bubble.classList.remove("sms-hide");
+            bubble.classList.add("sms-show");
+        }
+
+        function hideBubble() {
+            bubble.classList.remove("sms-show");
+            bubble.classList.add("sms-hide");
+        }
+
+        async function loop() {
+            if (!bubble || !textEl || !timeEl) return;
+
+            let idx = 0;
+            await new Promise(r => setTimeout(r, 700));
+
+            while (true) {
+                timeEl.textContent = timeLabel();
+                showBubble();
+
+                await typeText(textEl, messages[idx], 18);
+                await new Promise(r => setTimeout(r, 1700));
+
+                hideBubble();
+
+                idx = (idx + 1) % messages.length;
+                await new Promise(r => setTimeout(r, 900));
+            }
+        }
+
+        loop();
+    </script>
+    <script>
+        /* ========== Scroll Reveal ========== */
+        (() => {
+            const els = document.querySelectorAll(".reveal");
+            if (!els.length) return;
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) e.target.classList.add("reveal-in");
+                });
+            }, { threshold: 0.12 });
+
+            els.forEach(el => io.observe(el));
+        })();
+
+        /* ========== Button Ripple (premium) ========== */
+        (() => {
+            document.addEventListener("click", (e) => {
+                const btn = e.target.closest(".btn-ripple");
+                if (!btn) return;
+
+                const r = document.createElement("span");
+                r.className = "ripple";
+
+                const rect = btn.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                r.style.width = r.style.height = size + "px";
+                r.style.left = (e.clientX - rect.left - size / 2) + "px";
+                r.style.top = (e.clientY - rect.top - size / 2) + "px";
+
+                btn.appendChild(r);
+                setTimeout(() => r.remove(), 650);
+            });
+        })();
+
+        /* ========== Project hover glow follows mouse (different animation) ========== */
+        (() => {
+            const cards = document.querySelectorAll(".project-card");
+            cards.forEach(card => {
+                card.addEventListener("mousemove", (e) => {
+                    const r = card.getBoundingClientRect();
+                    const x = ((e.clientX - r.left) / r.width) * 100;
+                    const y = ((e.clientY - r.top) / r.height) * 100;
+                    card.style.setProperty("--mx", x + "%");
+                    card.style.setProperty("--my", y + "%");
+                });
+            });
+        })();
+
+        /* ========== Tilt Card for "What I deliver" (premium) ========== */
+        (() => {
+            const card = document.querySelector(".tilt-card");
+            if (!card) return;
+
+            const max = 10; // degree
+
+            function onMove(e) {
+                const r = card.getBoundingClientRect();
+                const px = (e.clientX - r.left) / r.width;
+                const py = (e.clientY - r.top) / r.height;
+
+                const rx = (py - 0.5) * -max;
+                const ry = (px - 0.5) * max;
+
+                card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateY(-2px)`;
+            }
+
+            function reset() {
+                card.style.transform = "rotateX(0deg) rotateY(0deg) translateY(0)";
+            }
+
+            card.addEventListener("mousemove", onMove);
+            card.addEventListener("mouseleave", reset);
+            card.addEventListener("mouseenter", reset);
+        })();
+
+        /* ========== Dynamic accent color changing (real color shift) ========== */
+        (() => {
+            // smoothly rotates accent palette values (no dependency)
+            const root = document.documentElement;
+
+            function setRGBVar(name, r, g, b) {
+                root.style.setProperty(name, `${r} ${g} ${b}`);
+            }
+
+            // HSV -> RGB
+            function hsvToRgb(h, s, v) {
+                const c = v * s;
+                const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
+                const m = v - c;
+                let rp = 0, gp = 0, bp = 0;
+
+                if (h < 60) { rp = c; gp = x; bp = 0; }
+                else if (h < 120) { rp = x; gp = c; bp = 0; }
+                else if (h < 180) { rp = 0; gp = c; bp = x; }
+                else if (h < 240) { rp = 0; gp = x; bp = c; }
+                else if (h < 300) { rp = x; gp = 0; bp = c; }
+                else { rp = c; gp = 0; bp = x; }
+
+                return {
+                    r: Math.round((rp + m) * 255),
+                    g: Math.round((gp + m) * 255),
+                    b: Math.round((bp + m) * 255),
+                };
+            }
+
+            let t = 0;
+            function tick() {
+                t += 0.4; // speed
+                const c1 = hsvToRgb((t) % 360, 0.75, 0.95);
+                const c2 = hsvToRgb((t + 110) % 360, 0.65, 0.95);
+                const c3 = hsvToRgb((t + 220) % 360, 0.60, 0.92);
+
+                setRGBVar("--a1", c1.r, c1.g, c1.b);
+                setRGBVar("--a2", c2.r, c2.g, c2.b);
+                setRGBVar("--a3", c3.r, c3.g, c3.b);
+
+                requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+        })();
+    </script>
+
+
+    <!-- Premium Toast -->
+    <div id="toastHost" class="toast-host" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Premium Modal -->
+    <div id="pModal" class="pmodal" aria-hidden="true">
+        <div class="pmodal-backdrop" data-close="1"></div>
+
+        <div class="pmodal-card" role="dialog" aria-modal="true" aria-labelledby="pModalTitle">
+            <div class="pmodal-top">
+                <div class="pmodal-icon" id="pModalIcon">i</div>
+                <div class="pmodal-head">
+                    <h3 id="pModalTitle" class="pmodal-title">Title</h3>
+                    <p id="pModalDesc" class="pmodal-desc">Description</p>
+                </div>
+                <button class="pmodal-x" id="pModalX" aria-label="Close">✕</button>
+            </div>
+
+            <div class="pmodal-actions">
+                <button class="btn-secondary" id="pModalCancel">Close</button>
+                <button class="btn-primary" id="pModalOk">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ========== Premium Toast ==========
+        function showToast({
+            title = "Notice",
+            message = "Something happened",
+            type = "info", // info | success | warn | error
+            duration = 2400
+        } = {}) {
+            const host = document.getElementById("toastHost");
+            if (!host) return;
+
+            const iconMap = { info: "i", success: "✓", warn: "!", error: "×" };
+
+            const t = document.createElement("div");
+            t.className = "toast";
+            t.style.setProperty("--dur", `${duration}ms`);
+
+            t.innerHTML = `
+      <div class="toast-row">
+        <div class="toast-ico">${iconMap[type] || "i"}</div>
+        <div style="flex:1">
+          <div class="toast-title">${title}</div>
+          <div class="toast-desc">${message}</div>
+
+          <div class="toast-meta">
+            <div class="toast-bar"><span></span></div>
+            <button class="toast-close" aria-label="Close">✕</button>
+          </div>
+        </div>
+      </div>
+    `;
+
+            host.appendChild(t);
+
+            const closeBtn = t.querySelector(".toast-close");
+            const kill = () => {
+                t.classList.add("toast-out");
+                setTimeout(() => t.remove(), 260);
+            };
+
+            closeBtn.addEventListener("click", kill);
+            setTimeout(kill, duration + 50);
+        }
+
+        // ========== Premium Modal ==========
+        const pModal = (() => {
+            const modal = document.getElementById("pModal");
+            const titleEl = document.getElementById("pModalTitle");
+            const descEl = document.getElementById("pModalDesc");
+            const iconEl = document.getElementById("pModalIcon");
+            const okBtn = document.getElementById("pModalOk");
+            const cancel = document.getElementById("pModalCancel");
+            const xBtn = document.getElementById("pModalX");
+
+            let resolver = null;
+
+            function open({ title = "Confirm", message = "Are you sure?", icon = "i", okText = "OK", cancelText = "Close" } = {}) {
+                if (!modal) return Promise.resolve(false);
+
+                titleEl.textContent = title;
+                descEl.textContent = message;
+                iconEl.textContent = icon;
+                okBtn.textContent = okText;
+                cancel.textContent = cancelText;
+
+                modal.classList.add("show");
+                modal.setAttribute("aria-hidden", "false");
+
+                return new Promise((resolve) => { resolver = resolve; });
+            }
+
+            function close(val = false) {
+                if (!modal) return;
+                modal.classList.remove("show");
+                modal.setAttribute("aria-hidden", "true");
+                if (resolver) resolver(val);
+                resolver = null;
+            }
+
+            if (modal) {
+                modal.addEventListener("click", (e) => {
+                    if (e.target?.dataset?.close) close(false);
+                });
+                xBtn?.addEventListener("click", () => close(false));
+                cancel?.addEventListener("click", () => close(false));
+                okBtn?.addEventListener("click", () => close(true));
+
+                document.addEventListener("keydown", (e) => {
+                    if (e.key === "Escape" && modal.classList.contains("show")) close(false);
+                });
+            }
+
+            return { open, close };
+        })();
+    </script>
+    <script>
+        const qaCards = document.querySelectorAll(".qa-card");
+
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add("show");
+                        }, i * 120); // stagger effect
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.3 }
+        );
+
+        qaCards.forEach(card => observer.observe(card));
+    </script>
+    <script>
+        /* ✅ What I deliver — Scroll reveal (stagger) */
+        (() => {
+            const title = document.querySelector(".deliver-title");
+            const items = document.querySelectorAll(".deliver-item");
+            if (!title && !items.length) return;
+
+            // Fallback
+            if (!("IntersectionObserver" in window)) {
+                title?.classList.add("deliver-in");
+                items.forEach(el => el.classList.add("deliver-in"));
+                return;
+            }
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach((e) => {
+                    if (!e.isIntersecting) return;
+
+                    title?.classList.add("deliver-in");
+                    items.forEach((el, i) => {
+                        setTimeout(() => el.classList.add("deliver-in"), i * 140);
+                    });
+
+                    io.disconnect(); // run once
+                });
+            }, { threshold: 0.25 });
+
+            io.observe(items[0] || title);
+        })();
+    </script>
+    <script>
+        // ✅ Make project GitHub links always clickable (no card/overlay interference)
+        document.querySelectorAll("#projects a.link").forEach((a) => {
+            a.addEventListener("click", (e) => {
+                e.stopPropagation(); // card/parent click hijack বন্ধ
+            });
+        });
+    </script>
+    <script>
+        function openLinkedInNotice() {
+            pModal.open({
+                title: "LinkedIn Profile",
+                message: "My LinkedIn profile will be added soon. You can contact me via GitHub or Email for now.",
+                icon: "in",
+                okText: "Got it",
+                cancelText: "Close"
+            }).then(() => {
+                showToast({
+                    title: "Info",
+                    message: "LinkedIn link coming soon 🚀",
+                    type: "info"
+                });
+            });
+        }
+    </script>
+    <script>
+        // ✅ Philosophy cards — premium reveal (unique)
+        (() => {
+            const cards = document.querySelectorAll(".philo-premium");
+            if (!cards.length) return;
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach((e) => {
+                    if (!e.isIntersecting) return;
+                    e.target.classList.add("philo-in");
+                    io.unobserve(e.target);
+                });
+            }, { threshold: 0.22 });
+
+            cards.forEach((c, i) => {
+                // stagger feel without heavy delay
+                c.style.transitionDelay = `${i * 120}ms`;
+                io.observe(c);
+            });
+        })();
+    </script>
+<script>
+  // ✅ Contact form — AJAX submit + premium toast
+  (() => {
+    const form = document.getElementById("contactForm");
+    const btn = document.getElementById("sendBtn");
+
+    if (!form || !btn) return;
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // UI: loading
+      btn.classList.add("is-loading");
+      const oldText = btn.querySelector(".btn-text")?.textContent || "Send Message";
+      if (btn.querySelector(".btn-text")) btn.querySelector(".btn-text").textContent = "Sending...";
+
+      try {
+        const endpoint = form.getAttribute("action");
+        const data = new FormData(form);
+
+        const res = await fetch(endpoint, {
+          method: "POST",
+          body: data,
+          headers: { "Accept": "application/json" }
+        });
+
+        if (res.ok) {
+          showToast({
+            title: "Message sent ✅",
+            message: "Thanks! Your message was delivered to my email.",
+            type: "success"
+          });
+          form.reset();
+        } else {
+          showToast({
+            title: "Failed",
+            message: "Something went wrong. Please try again.",
+            type: "error"
+          });
+        }
+      } catch (err) {
+        showToast({
+          title: "Network error",
+          message: "Check your internet and try again.",
+          type: "warn"
+        });
+      } finally {
+        btn.classList.remove("is-loading");
+        if (btn.querySelector(".btn-text")) btn.querySelector(".btn-text").textContent = oldText;
+      }
+    });
+  })();
+</script>
+
+
+<!-- 🐾 Cursor Mascot -->
+<div id="mascot" aria-hidden="true">
+  <div class="mascot-body">
+    <div class="mascot-eye left"></div>
+    <div class="mascot-eye right"></div>
+    <div class="mascot-mouth"></div>
+    <div class="mascot-blush left"></div>
+    <div class="mascot-blush right"></div>
+  </div>
+  <div class="mascot-shadow"></div>
+</div>
+
+<script>
+(() => {
+  const mascot = document.getElementById("mascot");
+  if (!mascot) return;
+
+  // smooth follow
+  let tx = -9999, ty = -9999;   // target
+  let x = tx, y = ty;           // current
+  const offset = 16;            // distance from cursor
+
+  function setClassOnly(cls){
+    mascot.classList.remove("react-card","react-link","react-button","react-input","react-focus");
+    if (cls) mascot.classList.add(cls);
+  }
+
+  // detect what user is hovering
+  document.addEventListener("mousemove", (e) => {
+    tx = e.clientX + offset;
+    ty = e.clientY + offset;
+
+    const el = document.elementFromPoint(e.clientX, e.clientY);
+    if (!el) return;
+
+    // closest important targets
+    const btn = el.closest("button, .btn-primary, .btn-secondary");
+    const link = el.closest("a");
+    const input = el.closest("input, textarea, select");
+    const card = el.closest(".project-card, .card, .philo, .mini, .stat, .chip");
+
+    if (input) setClassOnly("react-input");
+    else if (btn) setClassOnly("react-button");
+    else if (link) setClassOnly("react-link");
+    else if (card) setClassOnly("react-card");
+    else setClassOnly(""); // neutral
+  }, { passive: true });
+
+  // focus in contact form = happy + blush
+  document.addEventListener("focusin", (e) => {
+    if (e.target.closest("#contact")) {
+      mascot.classList.add("react-focus","react-input");
+    }
+  });
+
+  document.addEventListener("focusout", (e) => {
+    if (e.target.closest("#contact")) {
+      mascot.classList.remove("react-focus");
+    }
+  });
+
+  // click pop reaction + “happy” in contact form
+  document.addEventListener("click", (e) => {
+    mascot.classList.add("pop");
+    setTimeout(() => mascot.classList.remove("pop"), 240);
+
+    if (e.target.closest("#contact form")) {
+      mascot.classList.add("react-focus","react-input");
+      setTimeout(() => mascot.classList.remove("react-focus"), 900);
+    }
+  });
+
+  // RAF follow loop
+  function tick(){
+    // lerp
+    x += (tx - x) * 0.22;
+    y += (ty - y) * 0.22;
+    mascot.style.transform = `translate(${x}px, ${y}px)`;
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
+
+
+</body>
+
+</html>
